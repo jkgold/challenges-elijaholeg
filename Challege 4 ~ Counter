@@ -1,17 +1,17 @@
 var superCounter = function (str){
-var hits = []
+var numberLibrary = []
 var count = 0;
 for (var i = 1; i <= str.length; i++){
 
 if (str.charAt(i) == " "){
 count ++;
 }}
-hits.push(count+1)
-hits.push(count)
+numberLibrary.push(count+1)
+numberLibrary.push(count)
 var str = "count me in";
 var n = str.length
-hits.push(n)
-hits.push((n-count) / (count+1))
+numberLibrary.push(n)
+numberLibrary.push((n-count) / (count+1))
 
-console.log(hits)}
+console.log(numberLibrary)}
 superCounter("count me in")
