@@ -2,7 +2,9 @@ var Char = {};
 var string = "";
 Char.switch = function(arg) {
  for (var i=0; i < arg.length; i++) {
-   string+=(arg[i] === arg[i].toLowerCase() ? arg[i].toUpperCase() : arg[i].toLowerCase());}console.log(string); 
+   string+=(arg[i] === arg[i].toLowerCase() 
+   ? arg[i].toUpperCase() : arg[i].toLowerCase());}
+   console.log(string); 
 }; 
 
 
