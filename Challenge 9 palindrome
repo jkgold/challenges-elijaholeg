@@ -1,0 +1,6 @@
+function palindromicMap(n){
+   return n.split(" ").map(function(n){
+     return n === n.split("").reverse().join("");
+   });
+}
+console.log(palindromicMap("how to make a million dollars a pop"));
