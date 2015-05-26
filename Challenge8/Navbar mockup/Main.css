@@ -1,0 +1,36 @@
+head{
+	background: white;
+}
+.btn-default{
+	background: #6AB5C4;
+}
+ .container .button{
+	background: #6AB5C4;
+	border-radius: 4px;
+	float: left;
+	color: white;
+
+}
+.active{
+	color: white;
+}
+
+body{
+	background-color: #666;
+}
+
+
+
+.container{
+	display: inline;
+	color: white;
+}
+.button #dropdownMenu1{
+	color: white;
+	border-radius: 4px;
+	padding-bottom: 15px;
+
+}
+.container #home{
+	color: white;
+}
