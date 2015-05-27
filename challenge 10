@@ -1,6 +1,5 @@
-function wordSwitch(){
-  var str = "this is fun, hopefully.";
-  var splitter = str.split(/\b/);
+function wordSwitch(n){
+  var splitter = n.split(/\b/);
   var reverser = splitter.map(function(element){
     if(/\w/.test(element))
     {return element.split("").reverse().join("");
@@ -10,4 +9,4 @@ else {
 });
 console.log(reverser.join(""));
 }
-wordSwitch();
+wordSwitch("I like to move it, move it.");
