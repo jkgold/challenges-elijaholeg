@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title id="title">The Random Market</title>
+	<header>Welcome to The Random Market</header>
+	<link rel="stylesheet" href="Widget.Mockup.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body id="bod">
+	
+	<div class="container">
+		
+			<div class=" col-sm-4 col-xs-2">
+				<div id= "panel1" class="panel panel-primary">
+					<div class="panel-heading">Vine-picked Cucumber</div>
+					<div class="panel-body"> 
+							<img class="img" src="http://www.science-health.com/wp-content/uploads/2014/06/cucumber.jpg">
+							<div id="cucumber" class="col-sm-6 price">$2.00</div>
+						<div class="col-sm-6">qty:<input class="qty" type="number" value="1"/></div>
+					
+					</div>
+					<a href="" class="btn btn-xl btn-primary"<p><span class="glyphicon glyphicon-shopping-cart"></span></p>Add to cart</a>
+				</div>
+			</div>
+	
+					
+				<div class=" col-sm-4 col-xs-2">
+					<div id= "panel2" class="panel panel-success">
+						<div class="panel-heading">Fresh Orange</div>
+						<div class="panel-body">
+						<img class="img" src="https://d3nevzfk7ii3be.cloudfront.net/igi/KRLMkuaBjm5mKDDP">
+						<div id="orange" class="col-sm-6 price" data-unitPrice='2' >$2.00</div>
+						<div class="col-sm-6">qty:<input id="orangeVal" class="qty" type="number" value="1"/></div>
+						</div>
+						<a href="" class="btn btn-xl btn-primary"<p><span class="glyphicon glyphicon-shopping-cart"></span></p>Add to cart</a>
+					</div>
+				</div>
+				<div class=" col-sm-4 col-xs-2">
+					<div id= "panel3" class="panel panel-danger">
+						<div class="panel-heading">Referbished 1972 Ford Mustang</div>
+						<div class="panel-body">
+							
+							<img class="img" src="http://www.seriouswheels.com/pics-1970-1979/1972-Ford-Mustang-brown.jpg">
+							<div id="car" class="col-sm-6 price">$50,999.00</div>
+							<div class="col-sm-6">qty:<input class="qty" type="number" value="1"/></div>
+						</div>
+						<a href="" class="btn btn-xl btn-primary" <p><span class="glyphicon glyphicon-shopping-cart"></span></p>Add to cart</a>
+				</div>
+		</div>
+
+	<script>
+		$('.qty').on('change', function(){
+			var unit = $('[data-unitPrice]')
+			var text =  unit * $('#orangeVal').val()
+			text = text.toString()
+			text = "$" + text + ".00"
+			$('#orange').text(text);
+
+		});
+
+	</script>
+
+
+
+	
+	
+</body>
+</html>

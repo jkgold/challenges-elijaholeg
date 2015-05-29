@@ -1,0 +1,28 @@
+html .body{
+	background-image: url(http://www.thegentlemenzbarbershop.com/wp-content/uploads/2014/06/hd-wallpapers-background-wallpaperwebsites-desktop-website-templates-web-1920x1080-wallpaper-copy1.jpg)
+}
+
+.col-sm-4{
+	display: center;
+	margin-top: 10%;
+	padding-top: 10px;
+	padding-bottom: 90px; 
+}
+.img{
+	width: 300px;
+	height: 200px;
+}
+body#bod{
+	background-image: url(http://www.thegentlemenzbarbershop.com/wp-content/uploads/2014/06/hd-wallpapers-background-wallpaperwebsites-desktop-website-templates-web-1920x1080-wallpaper-copy1.jpg)
+}
+
+header{
+	background-color: #666;
+	color: #8AC1AE;
+	text-align: center;
+	font-size: 400%;
+	font-family: Courier;
+}
+.btn {
+	width: 348px;
+}
