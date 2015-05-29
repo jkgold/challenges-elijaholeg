@@ -1,0 +1,12 @@
+function wordSwitch(n){
+  var splitter = n.split(/\b/);
+  var reverser = splitter.map(function(element){
+    if(/\w/.test(element))
+    {return element.split("").reverse().join("");
+}
+else {
+  return element;}
+});
+console.log(reverser.join(""));
+}
+wordSwitch("I like to move it, move it.");
