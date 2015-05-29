@@ -1,0 +1,10 @@
+function assertEqual(n){
+  n = n.split("|");
+  var message = n[0].split("");
+  var code = n[1].split(" ");
+  return code.map(function(i){
+    return message[i];
+   }).join("");
+}
+
+console.log(assertEqual("sfGuisOthO12D|2 6 9 12"));
