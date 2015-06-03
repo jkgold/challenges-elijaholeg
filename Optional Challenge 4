@@ -1,0 +1,18 @@
+var dataManipulator = function(dataFileArray){
+	var manipulatedData = {"Users" : 0, "Organizations" : 0, "Site Admins" : 0, "Handles Shorter Than five Letters" : 0};
+	dataFileArray.map(function(dataObject){
+		if (dataObject["type"]="User"){
+			manipulatedData["Users"]++;
+		}
+		if (dataObject["type"] = "Orginazation"){
+			manipulatedData["Organizations"]++;
+		}
+		if (dataObject["site_admin"] = true){
+			manipulatedData["Site Admins"]++;
+		}
+		if (dataObject["login"].length <= 5){
+			manipulatedData["Handles Shorter Than five Letters"]++;
+		}
+	});
+	return manipulatedData
+}
