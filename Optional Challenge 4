@@ -4,10 +4,10 @@ var dataManipulator = function(dataFileArray){
 		if (dataObject["type"]="User"){
 			manipulatedData["Users"]++;
 		}
-		if (dataObject["type"] = "Orginazation"){
+		if (dataObject["type"] === "Orginazation"){
 			manipulatedData["Organizations"]++;
 		}
-		if (dataObject["site_admin"] = true){
+		if (dataObject["site_admin"] === true){
 			manipulatedData["Site Admins"]++;
 		}
 		if (dataObject["login"].length <= 5){
