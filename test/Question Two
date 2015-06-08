@@ -1,0 +1,21 @@
+var numberify = function(array){
+   for (i=0; i< array.length; i++){
+      array[i] = array[i]*1;
+    }
+    return array
+  };
+
+
+var splitSum = function(array){
+  var justNumberStrings = array[0].split(array[1]);
+  var justNumbers = numberify(justNumberStrings);
+  var result = justNumbers.reduce(function(a,b){
+    return a+b;
+  });
+  return result;
+}
+
+
+console.log(splitSum(["3:4:5:1", ":"]));
+
+

@@ -1,0 +1,13 @@
+var isTodayAWeekend = function (){
+  var date = new Date();
+  var day = date.getDay();
+  if(day === 0){
+    console.log(true);
+  }
+  if(day === 7){
+    console.log(true);
+  }
+  else {console.log(false);
+  }
+};
+console.log(isTodayAWeekend());

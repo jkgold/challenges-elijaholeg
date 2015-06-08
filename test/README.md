@@ -1,0 +1,2 @@
+# JSTest
+javascript test
