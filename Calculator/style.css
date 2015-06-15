@@ -1,0 +1,55 @@
+body {
+  background-color: darkkhaki;
+}
+button{
+  width: 40px;
+  height: 40px;
+  color: red;
+  border-radius: 10px;
+}
+
+.row {
+  width: 70px;
+}
+.row {
+  width: 100vw;
+  padding:0;
+}
+.col-md-3 {
+  display: inline-block;
+  padding: 0;
+}
+button{
+  margin:0;
+}
+
+#print-here {
+	height: 40px;
+	width: 175px;
+	float: right;
+	padding: 0 10px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+	font-size: 17px;
+	line-height: 40px;
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+	text-align: right;
+	letter-spacing: 1px;
+}
+.btn-toolbar {
+  margin-left: 0px;
+}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+
+.whole-container {
+  width: 175px;
+  background-color: floralwhite;
+  margin-left: auto;
+  margin-right: auto;
+}
