@@ -6,6 +6,7 @@ button{
   height: 40px;
   color: red;
   border-radius: 10px;
+  display: inline-block;
 }
 
 .row {
