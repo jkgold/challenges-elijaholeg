@@ -1,59 +1,69 @@
-body {
-  background-color: darkkhaki;
-}
-button{
-  width: 40px;
-  height: 40px;
-  color: red;
-  border-radius: 10px;
-  display: inline-block;
+body, div, a {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
 }
 
-.row {
-  width: 70px;
-}
-.row {
-  width: 100vw;
-  padding:0;
-}
-.col-md-3 {
-  display: inline-block;
-  padding: 0;
-}
-button{
-  margin:0;
+#calculator {
+	background-color: #99B;
+	width: 310px;
+	height: 460px;
+	border: 3px black solid;
+	margin: 10px auto;
+	padding: 5px;
+	border-radius: 10px;
 }
 
-#print-here {
-	height: 40px;
-	width: 175px;
-	float: right;
-	padding: 0 10px;
-	background: rgba(0, 0, 0, 0.2);
-	border-radius: 3px;
-	box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
-	font-size: 17px;
-	line-height: 40px;
-	color: white;
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-	text-align: right;
-	letter-spacing: 1px;
-}
-.btn-toolbar {
-  margin-left: 0px;
-}
-.row {
-  margin-right: 0px;
-  margin-left: 0px;
+#total {
+    height: 70px;
+    width: 300px;
+    margin:auto;
+    background-color:white;
+    margin-bottom: 5px;
+    text-align: right;
+    font-size: 60px;
+    padding: 0 5px;
 }
 
-
-.whole-container {
-  width: 175px;
-  background-color: floralwhite;
-  margin-left: auto;
-  margin-right: auto;
+#numbers, #operators {
+	margin: auto;
 }
-.zero{
-  width: 80px;
+
+#operators a {
+	display: block;
+	width: 45px;
+	height: 45px;
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	font-size: 39px;
+	padding: 2px;
+	margin: 5px 6px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}
+
+#numbers a {
+	display: block;
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	font-size: 32pt;
+	padding: 10px;
+	margin: 5px 15px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+	background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+	border-radius: 10px;
+}
+
+a:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(#EDEDED));
+    background: -moz-linear-gradient(top,  #DCDCDC,  #EDEDED);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
 }
