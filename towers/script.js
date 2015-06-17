@@ -14,11 +14,11 @@ $(document).ready(function() {
 		console.log(thePlane);
 		if (thePlate) {
 			if ($(this).children().length) {
-				console.log("this is the plate", $(thePlate).text());
-				console.log("this is the firstchild", $(this).find(":first-child").text());
-				$(thePlate).text() < ($(this).find(":first-child").text()) ? $(thePlane).append(thePlate) : alert("Dont stack bigger plates on smaller plates");
+				// console.log("this is the plate", $(thePlate).text());
+				// console.log("this is the firstchild", $(this).find(":first-child").text());
+				$(thePlate).text() < ($(this).find(":first-child").text()) ? $(thePlane).prepend(thePlate) : alert("Dont stack bigger plates on smaller plates");
 			} else {
-				$(thePlane).append(thePlate)
+				$(thePlane).prepend(thePlate)
 			}
 			thePlate = [];
 			thePlane = [];
