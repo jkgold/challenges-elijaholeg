@@ -3,12 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script data-require="angular.js@1.4.1" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="create-new">
+  <div class="head container">
+    <span class="col-lg-12">
+      <h1>Contactos</h1>
+    </span>
+  </div>
+  <div class="container">
+  <div class="create-new col-lg-6">
     <input id="first-name" ng-model="name1" class="input" placeholder="First Name">
     <br>
     <input id="last-name" ng-model="name2" class="input" name="name" placeholder="Last Name">
@@ -19,7 +26,7 @@
     <br>
     <button type="submit" ng-model="submit" ng-click="submitContact()" name="button">submit</button>
   </div>
-  <div class="eachCard">
+  <div class="eachCard col-lg-6">
     <table>
       <thead>
         <tr id="all-headers">
@@ -68,6 +75,7 @@
       </tbody>
     </table>
     <input type="search" ng-model="search" placeholder="search...">
+  </div>
   </div>
 </body>
 <script src="script.js"></script>
