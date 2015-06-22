@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="contacts" ng-controller="contactController">
+
+<head>
+  <meta charset="utf-8">
+  <script data-require="angular.js@1.4.1" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="create-new">
+    <input id="first-name" ng-model="name1" class="input" placeholder="First Name">
+    <br>
+    <input id="last-name" ng-model="name2" class="input" name="name" placeholder="Last Name">
+    <br>
+    <input id="email" ng-model="email" class="input" placeholder="Email Address">
+    <br>
+    <input id="phone" ng-model="phone" class="input" placeholder="Phone Number">
+    <br>
+    <button type="submit" ng-model="submit" ng-click="submitContact()" name="button">submit</button>
+  </div>
+  <div class="eachCard">
+    <table>
+      <thead>
+        <tr id="all-headers">
+          <th>
+            <a href="#" ng-click="order('Name')">Name</a>
+          </th>
+          <th>
+            <a href="#" ng-click="order('PhoneNumber')">Phone Number</a>
+          </th>
+          <th>
+            <a href="#" ng-click="order('Email')">Email</a>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in contactsList | filter: search | orderBy:predicate:reverse track by $index" id="table-body">
+          <td id="fullName">
+            <span ng-show="contact.editing" ng-keyup="$event.keyCode === 13 && (contact.editing = false)">
+              <input ng-model="contact.Name" type="text">
+            </span>
+            <span ng-hide="contact.editing" >
+            {{contact.Name}}
+            </span>
+          </td>
+          <td id="number">
+            <span ng-show="contact.editing" ng-keyup="$event.keyCode === 13 && (contact.editing = false)">
+              <input ng-model="contact.PhoneNumber" type="text">
+            </span>
+            <span ng-hide="contact.editing">
+            {{contact.PhoneNumber}}
+            </span>
+          </td>
+          <td id="fullEmail">
+            <span ng-show="contact.editing" ng-keyup="$event.keyCode === 13 && (contact.editing = false)">
+              <input ng-model="contact.Email" type="text">
+            </span>
+            <span ng-hide="contact.editing">
+            {{contact.Email}}
+            </span>
+          </td>
+          <td>
+            <a href="#" ng-click="contact.editing = true" ng-model="edit-button">edit</a>
+            <button type="button" ng-model="delete-button" ng-click="deleteContact($index)"name="button">x</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="search" ng-model="search" placeholder="search...">
+  </div>
+</body>
+<script src="script.js"></script>
