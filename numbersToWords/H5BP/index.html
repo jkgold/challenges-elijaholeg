@@ -20,20 +20,24 @@
     <div class="container">
         <h1>Welcome to Wordify</h1>
         <div class="jumbotron">
-            <form ng-submit="wordify(numberput)">
-              <div class="input-group" ng-class"'has-error': invalidInput">
+            <form novalidate ng-submit="wordify(numberput)" name="inputForm">
+              <div class="input-group" ng-class="{'has-error': inputForm.number.$dirty && inputForm.number.$invalid}">
                 <input class="form-control input-lg"
+                        name="number"
                         ng-model="numberput"
-                        ng-keyup="isValid()"
-                        placeholder="type numbers here">
+                        pattern ="^[\d -]+"
+                        placeholder="type numbers here" required>
                 <span class="input-group-btn">
-                  <button class="btn btn-lg btn-success">wordify</button>
+                  <button ng-disabled="inputForm.number.$invalid" class="btn btn-lg btn-success">wordify</button>
                 </span>
               </div>
             </form>
+            <input type="search" ng-model="search" value="">
         </div>
         <ul  class="list-group">
-          <li ng-repeat="word in words" class="list-group-item">{{word.text}}</li>
+          <li ng-repeat="word in words | filter:search" class="list-group-item">
+            <div ng-bind-html="word.html"></div>
+            </li>
         </ul>
     </div>
 
